@@ -27,7 +27,8 @@ constructor(public accountService: AccountService, private router: Router, priva
         this.router.navigateByUrl('/members');
       },
       error: err => {
-        this.toastr.error(err.error);
+        // this.toastr.error(err.error);
+        console.log(err)
       }
     });
 
