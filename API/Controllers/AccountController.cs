@@ -73,7 +73,7 @@ public class AccountController: BaseApiController
         {
             Username = user.Username,
             Token = _tokenService.CreateToken(user),
-            photoUrl = user.Photos.FirstOrDefault(x => x.IsMain).Url,
+            photoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
             KnownAs = user.KnownAs,
             Gender = user.Gender,
         };
